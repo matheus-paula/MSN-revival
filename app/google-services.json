@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "proj_number",
+    "firebase_url": "<firebase_url>",
+    "project_id": "<project_id>",
+    "storage_bucket": "<project>.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "<yourid>",
+        "android_client_info": {
+          "package_name": "com.app.messenger.messenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "useraccountid",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "yourkey"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

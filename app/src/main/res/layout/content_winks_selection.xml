@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatScreenMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="-10dp"
+    android:background="@color/defaultWhite"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".WinksSelection"
+    tools:showIn="@layout/activity_winks_selection">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <VideoView
+                android:id="@+id/winkPreviewPlayer"
+                android:layout_width="360dp"
+                android:layout_height="360dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/defaultWhite"
+                android:minHeight="360dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/winksView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:overScrollMode="never" />
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <Button
+                android:id="@+id/sendWinkBtn"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/windows_ui_btn"
+                android:gravity="center"
+                android:text="@string/send"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

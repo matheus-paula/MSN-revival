@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Design.CoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultWhite"
+    tools:context=".WinksSelection">
+
+<android.support.design.widget.AppBarLayout
+    style="@style/MessengerBar.ActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:elevation="0dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/winksSelectionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@null"
+        android:theme="@style/WindowsLiveDefaultFont"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:subtitle="@string/select_a_wink_desc"
+        app:subtitleTextAppearance="@style/WindowsLiveDefaultFont"
+        app:titleTextColor="@color/defaultBlack" />
+
+</android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_winks_selection" />
+
+</android.support.design.widget.CoordinatorLayout>

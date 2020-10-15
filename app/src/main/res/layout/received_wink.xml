@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingEnd="60dp"
+    android:paddingStart="15dp"
+    android:paddingVertical="10dp"
+    tools:targetApi="o">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/receivedWink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/contact_bubble"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/receivedWinkImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/wink_item_shape"
+            android:backgroundTint="@color/defaultWhite"
+            android:contentDescription="@string/wink"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wink_frog" />
+
+        <TextView
+            android:id="@+id/receivedWinkTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="56dp"
+            android:maxWidth="180dp"
+            android:minWidth="50dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:text="@string/default_message_content"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/playReceivedWink"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_play_circle_filled_black_24dp"
+            android:backgroundTint="@color/defaultBlack"
+            android:contentDescription="@string/playWingMsg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

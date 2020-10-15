@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/defaultWhite</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/segoe_ui</item>
+        <item name="fontFamily">@font/segoe_ui</item>
+        <item name="android:actionBarStyle">@style/MessengerBar.ActionBar</item>
+        <item name="actionBarStyle">@style/MessengerBar.ActionBar</item>
+        <item name="android:homeAsUpIndicator">@drawable/baseline_arrow_back_24</item>
+        <item name="android:colorControlNormal">@color/defaultBlack</item>
+        <item name="colorControlNormal">@color/defaultBlack</item>
+    </style>
+
+    <style name="CollapsingToolbarTitle">
+        <item name="android:fontFamily">@font/segoe_ui</item>
+        <item name="android:textColor">@color/defaultBlack</item>
+    </style>
+
+    <style name="MessengerBar.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/default_messenger_skinny</item>
+        <item name="background">@drawable/default_messenger_skinny</item>
+        <item name="android:actionMenuTextColor">@color/defaultBlack</item>
+        <item name="actionMenuTextColor">@color/defaultBlack</item>
+        <item name="android:actionButtonStyle">@style/MessengerBar.ActionBar.ActionButton</item>
+        <item name="actionButtonStyle">@style/MessengerBar.ActionBar.ActionButton</item>
+        <item name="android:titleTextStyle">@style/MessengerBar.ActionBar.Text</item>
+        <item name="titleTextStyle">@style/MessengerBar.ActionBar.Text</item>
+    </style>
+
+    <style name="MessengerBar.ActionBar.Text" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/defaultBlack</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="MessengerBar.ActionBar.ActionButton" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/defaultBlack</item>
+        <item name="android:color">@color/defaultBlack</item>
+    </style>
+
+
+    <style name="WindowsLiveDefaultFont" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:fontFamily">@font/segoe_ui</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/defaultWhite</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="background">@drawable/default_messenger_skinny</item>
+        <item name="android:textColorPrimary">@color/defaultBlack</item>
+        <item name="android:textColor">@color/defaultBlack</item>
+        <item name="android:color">@color/defaultBlack</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowBackground">@color/defaultWhite</item>
+        <item name="background">@drawable/default_messenger_skinny</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

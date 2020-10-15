@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.app.messenger.messenger.MainScreen">
+    <item android:title="@string/profileStatusDesc">
+        <menu>
+            <item
+                android:id="@+id/mainStatusDrop_1"
+                android:icon="@drawable/online_icon"
+                android:title="@string/available"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/mainStatusDrop_2"
+                android:icon="@drawable/absent_icon"
+                android:title="@string/absent"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/mainStatusDrop_3"
+                android:icon="@drawable/busy_icon"
+                android:title="@string/busy"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/mainStatusDrop_4"
+                android:icon="@drawable/offline_icon"
+                android:title="@string/offline"
+                app:showAsAction="always" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="101"
+        android:title="@string/settings"
+        app:showAsAction="never" ></item>
+    <item
+        android:id="@+id/sendInvite"
+        android:orderInCategory="102"
+        android:title="@string/sendInvite"
+        app:showAsAction="never" ></item>
+    <item
+        android:id="@+id/signOut"
+        android:orderInCategory="103"
+        android:title="@string/signOut"
+        app:showAsAction="never" ></item>
+</menu>

@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- Share Music -->
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_share_music"
+        android:summary="@string/show_listening_music_desc"
+        android:title="@string/show_listening_music" />
+
+    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it. -->
+    <!-- Configuração de Porta -->
+
+</PreferenceScreen>

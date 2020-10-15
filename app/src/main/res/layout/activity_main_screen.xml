@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Design.CoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultWhite"
+    tools:context=".MainScreen">
+
+    <android.support.design.widget.AppBarLayout
+        style="@style/MessengerBar.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/mainBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/profilePhotoStatus"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="10dp">
+
+                <ImageView
+                    android:id="@+id/mainProfilePhoto"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:contentDescription="@string/profilePhotoDesc"
+                    app:srcCompat="@drawable/no_photo" />
+
+                <ImageView
+                    android:id="@+id/mainProfileStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/profileStatusDesc"
+                    app:srcCompat="@drawable/profile_status_offline" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/mapsToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start|end"
+                    android:longClickable="false"
+                    android:theme="@style/WindowsLiveDefaultFont"
+                    app:buttonGravity="bottom"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:subtitleTextAppearance="@style/WindowsLiveDefaultFont"
+                    app:titleTextColor="@color/defaultBlack" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main_screen" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_flat_msn_messenger" />
+
+</android.support.design.widget.CoordinatorLayout>

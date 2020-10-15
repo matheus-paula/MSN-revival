@@ -1,0 +1,135 @@
+<resources>
+        / * TITLES * /
+        <string name="app_name">Messenger</string>
+        <string name="msg_notification_channel">Messages Notifications</string>
+        <string name="msg_notification_channel_desc">Message notifications</string>
+        <string name="invites_notification_channel">Friendship Requests</string>
+        <string name="settings">Settings</string>
+        <string name="available">Online</string>
+        <string name="absent">Away</string>
+        <string name="busy">Busy</string>
+        <string name="offline">Appear Offline</string>
+        <string name="profilePhotoDesc">Profile Picture</string>
+        <string name="profileStatusDesc">Status</string>
+        <string name="change_user_name">User Name</string>
+        <string name="change_user_name_hint">Ex: Gerson</string>
+        <string name="title_activity_invites">Invitations</string>
+        <string name="title_activity_profile">Profile</string>
+        <string name="change_bio">Personal message</string>
+        <string name="default_contact_name">Contact</string>
+        <string name="default_message_content">message</string>
+        <string name="default_time">00:00</string>
+        <string name="default_bio">Hello, I\'m new to messenger!</string>
+        <string name="your_name">Your Name</string>
+        <string name="wink">Wink</string>
+        <string name="no_network_msg">No network</string>
+        <string name="myLocation">My Location</string>
+        <string name="sendInviteDesc">Contact email:</string>
+        <string name="pending_invite_msg">Friend request</string>
+        <string name="unknow_artist">Unknow Artist</string>
+        <string name="unknow_title">Unknow Title</string>
+        <string name="undo_friendship">Undo friendship</string>
+        <string name="default_zero">0</string>
+        <string name="divider_bar">Divider Bar</string>
+        <string name="email">E-mail</string>
+        <string name="email_example">email@email.com</string>
+        <string name="title_activity_winks_selection">Select a Wink</string>
+
+        /* ACTIONS */
+        <string name="signInMsg">Sign in to Messenger</string>
+        <string name="signIn">Sign in</string>
+        <string name="signOut">Sign out</string>
+        <string name="cancel">Cancel</string>
+        <string name="ok">OK</string>
+        <string name="yes">Sim</string>
+        <string name="no">Não</string>
+        <string name="send">Send</string>
+        <string name="playWingMsg">Play wink</string>
+        <string name="acceptInvite">Accept</string>
+        <string name="declineInvite">Decline</string>
+        <string name="invitationAction1">Reply</string>
+        <string name="send_a_message">Send a message …</string>
+        <string name="type_a_message">Type here …</string>
+        <string name="change_profile_photo">Change profile photo</string>
+        <string name="change_user_name_desc">Enter your Name:</string>
+        <string name="change_bio_desc">Add your message:</string>
+        <string name="check_again">Check again</string>
+        <string name="sendInvite">Send invitation</string>
+        <string name="sendLocation">Send location</string>
+
+        / * RESULTS OF SHARES / STATES * /
+        <string name="message_notifications">%s (%d messages)</string>
+        <string name="nudging_notification_title">Request for attention</string>
+        <string name="nudging_notification">just sended you a nudge!</string>
+        <string name="nudging_notification_yourself">You have just sent a nudge to %s!</string>
+        <string name="location_notification">just sent you a location!</string>
+        <string name="wink_msg_from">just sent you a wink!</string>
+        <string name="wink_msg_to">You just sent a wink to</string>
+        <string name="friend_request_notification">wants to be your friend in Messenger!</string>
+        <string name="inline_notification_msg">has just signed in …</string>
+        <string name="pendingInvites">pending invitation</string>
+        <string name="noPendingInvites">No pending invitations</string>
+        <string name="pendingInvites2">pending invitations</string>
+        <string name="contactAdded">User added to your contact list!</string>
+        <string name="removedInvites">Invitation removed from list</string>
+
+        / * WARNINGS * /
+        <string name="sendWinkConfirm">Do you really want to send this wink?</string>
+        <string name="no_network_msg_detail">To use Messenger, you must be connected to the internet!</string>
+        <string name="no_server_msg">Server unavailable</string>
+        <string name="remove_friend">Are you sure you want to remove this contact from your friends list?\n(Conversations will not be deleted)</string>
+        <string name="no_server_msg_detail">The messenger server is unavailable or inaccessible, try again later!</string>
+        <string name="no_contacts_msg">No contacts available</string>
+        <string name="no_contacts_msg_detail">To use Messenger add new contacts by clicking the [ \u22EE ] button in the upper right corner of the screen!</string>
+        <string name="no_permission_storage_msg">No read and write permission on the store can not define a profile photo!</string>
+        <string name="complete_action_using">Complete the action using:</string>
+        <string name="signInFailMsg">Failed to sign in with Google account</string>
+        <string name="addContactFailMsg">The contact you are trying to add does not use messenger!</string>
+        <string name="noPendentInvites">There are no pending friendship invitations!</string>
+        <string name="unavailableGooglePlayServices">Google services are currently unavailable, please try again later!</string>
+        <string name="googlePlayServicesRapairMsg">Google Play Services is not installed or requires an update!</string>
+        <string name="noPendentInvitesMsg">You do not have any pending friendships yet!</string>
+        <string name="addYourselfErrorMsg">You can not add yourself!</string>
+        <string name="contactExistsMsg">The contact is already on your list!</string>
+        <string name="invalidEmailMsg">The email you just entered is not valid!</string>
+
+        / * DESCRIPTIONS * /
+        <string name="invites_notification_channel_desc">Show notifications for new friend requests</string>
+        <string name="change_bio_hint">Talk about what\'s happening!</string>
+        <string name="default_">Change user name</string>
+        <string name="change_bio_btn_desc">Change your personal message</string>
+        <string name="change_name_btn_desc">Change username</string>
+        <string name="select_a_wink_desc">Select a wink below and send to the contact</string>
+
+        / * STATUS ARRAY * /
+        <string-array name="statusArray">
+            <item>Online</item>
+            <item>Away</item>
+            <item>Busy</item>
+            <item>Appear Offline</item>
+        </string-array>
+
+
+        <!-- Music Settings -->
+        <string name="pref_music">Music</string>
+        <string name="show_listening_music">Show what I\'m listening to</string>
+        <string name="show_listening_music_desc">By activating this function the music you are listening to will be shared in your personal message (Not all players are compatible)</string>
+
+        <!-- Notifications Settings -->
+        <string name="pref_title_conversation_sounds">Conversation sounds</string>
+        <string name="pref_title_conversation_sounds_desc">Play sounds for incoming and outgoing messages</string>
+        <string name="pref_header_notifications">Notifications</string>
+        <string name="pref_msgs_notifications_group">Message notifications</string>
+        <string name="pref_invites_notifications_group">Invitation notifications</string>
+        <string name="pref_title_new_message_notifications">New Message notifications</string>
+        <string name="pref_title_new_invite_notifications">New invitation notifications</string>
+        <string name="pref_title_message_ringtone">Notification sound</string>
+        <string name="pref_title_status_notifications_group">Status notifications</string>
+        <string name="pref_title_status_notifications">Online users notification</string>
+        <string name="pref_title_status_notifications_desc">Displays notifications in the chat window whenever a contact changes their status to \"Available\"</string>
+        <string name="pref_ringtone_silent">Silent</string>
+        <string name="pref_title_vibrate">Vibration</string>
+        <string name="title_activity_contact_profile">Contact profile</string>
+        <string name="action_settings">Settings</string>
+
+</resources>

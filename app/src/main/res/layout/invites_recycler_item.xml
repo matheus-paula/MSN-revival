@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/invite_recycler_clickable_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:baselineAligned="true"
+    android:clickable="false"
+    android:focusableInTouchMode="false"
+    android:gravity="start"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <FrameLayout
+        android:layout_width="62dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0">
+
+        <ImageView
+            android:id="@+id/inviteMainProfilePhoto"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:adjustViewBounds="true"
+            android:baselineAligned="true"
+            android:contentDescription="@string/profilePhotoDesc"
+            android:cropToPadding="false"
+            android:scaleType="fitStart" />
+
+        <ImageView
+            android:id="@+id/inviteContactStatus"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/profile_status_offline" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:id="@+id/inviteContactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoe_ui"
+            android:maxLines="1"
+            android:maxWidth="150dp"
+            android:text="@string/default_contact_name"
+            android:textAlignment="viewStart"
+            android:textColor="@color/defaultBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/inviteContactListBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/inviteContactName"
+            android:layout_below="@+id/inviteContactName"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/segoe_ui"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="135dp"
+            android:singleLine="true"
+            android:text="@string/default_bio"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/declineInvite"
+                android:layout_width="65dp"
+                android:layout_height="26dp"
+                android:layout_weight="1"
+                android:background="@drawable/windows_ui_btn"
+                android:gravity="center"
+                android:text="@string/declineInvite"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/acceptInvite"
+                android:layout_width="62dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/windows_ui_btn"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="@string/acceptInvite"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

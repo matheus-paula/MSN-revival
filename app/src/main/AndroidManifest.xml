@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.messenger.messenger">
+
+    <permission android:name="android.permission.STORAGE" />
+    <permission android:name="android.permission.INTERNET" />
+    <permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <permission android:name="android.permission.java.net.SocketImpl" />
+    <permission android:name="android.permission.java.net.Socket" />
+    <permission android:name="android.permission.java.net.AbstractPlainSocketImpl" />
+    <permission
+        android:name="example.gps.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/msn_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/msn_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyANy4Tfe3WZNY_mTyPFexn3QjAhEu517n8" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyANy4Tfe3WZNY_mTyPFexn3QjAhEu517n8" />
+
+        <activity
+            android:name=".MainScreen"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="appmsnmessenger.firebase.google.com"
+                    android:pathPrefix="/message"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".MainScreen"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ProfileActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".MainScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.messenger.messenger.MainScreen" />
+        </activity>
+        <activity
+            android:name=".ChatScreenActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/settings"
+            android:parentActivityName=".MainScreen"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".SignIn"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/signIn"
+            android:parentActivityName=".MainScreen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ContactProfile"
+            android:label="@string/title_activity_contact_profile"
+            android:parentActivityName=".ChatScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.messenger.messenger.ChatScreenActivity" />
+        </activity>
+        <activity
+            android:name=".InvitesActivity"
+            android:label="@string/title_activity_invites"
+            android:parentActivityName=".MainScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.messenger.messenger.MainScreen" />
+        </activity>
+
+        <service
+            android:name=".BackgroundNotifications"
+            android:exported="false">
+            <intent-filter>
+
+                <!-- Default android -->
+                <action android:name="com.android.music.metachanged" />
+                <action android:name="com.android.music.playstatechanged" />
+
+                <!-- HTC -->
+                <action android:name="com.htc.music.playstatechanged" />
+                <action android:name="com.htc.music.metachanged" />
+
+                <!-- MIUI -->
+                <action android:name="com.miui.player.playstatechanged" />
+                <action android:name="com.miui.player.metachanged" />
+
+                <!-- Rdio -->
+                <action android:name="com.rdio.android.metachanged" />
+                <action android:name="com.rdio.android.playstatechanged" />
+
+                <!-- Rhapsody -->
+                <action android:name="com.rhapsody.metachanged" />
+                <action android:name="com.rhapsody.playstatechanged" />
+
+                <!-- Playerpro -->
+                <action android:name="com.tbig.playerpro.metachanged" />
+                <action android:name="com.tbig.playerpro.playstatechanged" />
+                <action android:name="com.tbig.playerprotrial.metachanged" />
+                <action android:name="com.tbig.playerprotrial.playstatechanged" />
+
+                <!-- Samsung -->
+                <action android:name="com.sec.android.app.music.metachanged" />
+                <action android:name="com.sec.android.app.music.playstatechanged" />
+                <action android:name="com.samsung.MusicPlayer.metachanged" />
+                <action android:name="com.samsung.sec.metachanged" />
+                <action android:name="com.samsung.music.metachanged" />
+                <action android:name="com.samsung.sec.android.MusicPlayer.metachanged" />
+                <action android:name="com.samsung.sec.android.MusicPlayer.playstatechanged" />
+
+                <!-- Rocket Player -->
+                <action android:name="com.jrtstudio.AnotherMusicPlayer.metachanged" />
+                <action android:name="com.jrtstudio.AnotherMusicPlayer.playstatechanged" />
+
+                <!-- JRT's Android Music Player -->
+                <action android:name="com.jrtstudio.music.metachanged" />
+                <action android:name="com.jrtstudio.music.playstatechanged" />
+
+                <!-- Doubletwist -->
+                <action android:name="com.doubleTwist.androidPlayer.metachanged" />
+                <action android:name="com.doubleTwist.androidPlayer.playstatechanged" />
+
+                <!-- Pandora (Tested, not working) -->
+                <action android:name="com.pandora.android.metachanged" />
+                <action android:name="com.pandora.android.playstatechanged" />
+
+                <!-- WinAMP (Untested) -->
+                <action android:name="com.nullsoft.winamp.playstatechanged" />
+                <action android:name="com.nullsoft.winamp.metachanged" />
+
+                <!-- 8Tracks (Untested) -->
+                <action android:name="com.e8tracks.playstatechanged" />
+                <action android:name="com.e8tracks.metachanged" />
+
+                <!-- JetAudio (Untested) -->
+                <action android:name="com.jetappfactory.jetaudio.playstatechanged" />
+                <action android:name="com.jetappfactory.jetaudio.metachanged" />
+                <action android:name="com.jetappfactory.jetaudioplus.playstatechanged" />
+                <action android:name="com.jetappfactory.jetaudioplus.metachanged" />
+                <action android:name="com.jrtstudio.AnotherMusicPlayer.metachanged" />
+                <action android:name="com.jrtstudio.AnotherMusicPlayer.playstatechanged" />
+
+                <!-- SoundCloud (Untested) -->
+                <action android:name="com.soundcloud.android.playstatechanged" />
+                <action android:name="com.soundcloud.android.metachanged" />
+
+                <!-- Apple Music (Untested) -->
+                <action android:name="com.apple.android.music.playstatechanged" />
+                <action android:name="com.apple.android.music.metachanged" />
+
+                <!-- Spotify -->
+                <action android:name="com.spotify.music.playbackstatechanged" />
+                <action android:name="com.spotify.music.metachanged" />
+
+                <!-- Amazon -->
+                <action android:name="com.spotify.music.metadatachanged" />
+                <action android:name="com.spotify.music.playbackstatechanged" />
+
+                <!-- Apollo -->
+                <action android:name="com.andrew.apollo.metachanged" />
+                <action android:name="com.andrew.apollo.playstatechanged" />
+
+                <!-- PowerAmp -->
+                <action android:name="com.maxmpz.audioplayer.metachanged" />
+                <action android:name="com.maxmpz.audioplayer.playstatechanged" />
+
+                <!-- Music Flow Player -->
+                <action android:name="com.lge.music.metachanged" />
+                <action android:name="com.lge.music.playstatechanged" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".WinksSelection"
+            android:label="@string/title_activity_winks_selection"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ChatScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.app.messenger.messenger.ChatScreenActivity" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:useLevel="false">
+    <item>
+        <shape android:shape="rectangle">
+            <!-- draw a 4 dp width border around the rectangle shape -->
+            <stroke android:color="#878787" android:width="4dp"/>
+        </shape>
+    </item>
+    <item android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+</shape>

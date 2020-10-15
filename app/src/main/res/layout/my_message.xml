@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+    android:paddingEnd="15dp"
+    android:paddingStart="60dp"
+    android:clipToPadding="false" tools:targetApi="o">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/myMessageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/my_message"
+        android:elevation="2dp"
+        tools:ignore="NotSibling">
+
+        <TextView
+            android:id="@+id/message_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:minWidth="50dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/default_message_content"
+            android:textAlignment="viewStart"
+            android:textColor="@color/defaultBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.84000003" />
+
+        <TextView
+            android:id="@+id/userMessageTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="30dp"
+            android:paddingStart="5dp"
+            android:text="@string/default_time"
+            android:textColor="@color/softGray2"
+            android:textSize="12sp"
+            android:translationY="0dp"
+            android:translationZ="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/readTick"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_done_gray_24dp" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

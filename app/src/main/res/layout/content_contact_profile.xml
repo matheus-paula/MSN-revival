@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultWhite"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ContactProfile"
+    tools:showIn="@layout/activity_contact_profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:text="@string/change_bio"
+            android:textSize="22sp" />
+
+
+        <TextView
+            android:id="@+id/expandedProfileBIO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/default_bio" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:textSize="22sp"
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/contactProfileUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/email_example" />
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

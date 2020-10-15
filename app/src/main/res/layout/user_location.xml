@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingEnd="60dp"
+    android:paddingStart="15dp"
+    android:paddingVertical="10dp"
+    tools:targetApi="o">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/contactLocationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/contact_bubble"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/contactLocationImg"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/windows_ui_btn"
+            android:contentDescription="@string/myLocation"
+            android:padding="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/contactLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/contactLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxWidth="250dp"
+            android:minWidth="50dp"
+            android:padding="10dp"
+            android:text="@string/default_message_content"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:linksClickable="true"
+            android:textColorLink="@color/defaultBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.84000003" />
+
+        <TextView
+            android:id="@+id/contactLocationTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="6dp"
+            android:keepScreenOn="false"
+            android:text="@string/default_time"
+            android:textSize="12sp"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"  />
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
